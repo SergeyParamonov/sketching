@@ -13,7 +13,7 @@ This readme contains examples of sketched answer set programs (*below*), [requir
 In table below, we provide an overview of the dataset and its properties, such the number of sketched variable in each problem and the number of rules, other columns denote the number of particular type of sketched variables, e.g., "# ?not" indicates how many atom with the sketched negation are in the program. Of course, one can introduce a different set of sketched variables for each problem but to give a more complete picture of the experimental settings we describe the dataset as it has been used in the experiments (where the number and position of sketched variables are fixed).
 
 
-| **Problem** | **# Sketched ** | ** # ?=** | **# ?+** | **# ?not** | **# ?p** | **# Rules** |
+| **Problem** | **# Sketched** | **# ?=** | **# ?+** | **# ?not** | **# ?p** | **# Rules** |
 | --- | --- | --- | --- | --- | --- | --- |
 | Graph Clique            |        3              |   1  |  0    |    0    |   2   |    4    |
 | 3D Matching             |        3              |   3  |  0    |    0    |   0   |    1    |
