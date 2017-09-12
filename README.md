@@ -8,6 +8,34 @@ This readme contains examples of sketched answer set programs (*below*), [requir
 * **skethcher_sources**  contains python source files [**will be uploaded later on**]
 * **rewritten_sketches** contains sketches rewritten into ASP (obtained by running the algorithm on corresponding sketch)
 
+## Dataset overview
+
+In table below, we provide an overview of the dataset and its properties, such the number of sketched variable in each problem and the number of rules, other columns denote the number of particular type of sketched variables, e.g., "# ?not" indicates how many atom with the sketched negation are in the program. Of course, one can introduce a different set of sketched variables for each problem but to give a more complete picture of the experimental settings we describe the dataset as it has been used in the experiments (where the number and position of sketched variables are fixed).
+
+
+| **Problem** | **# Sketched ** | ** # ?=** | **# ?+** | **# ?not** | **# ?p** | **# Rules** |
+| --- | --- | --- | --- | --- | --- | --- |
+| Graph Clique            |        3              |   1  |  0    |    0    |   2   |    4    |
+| 3D Matching             |        3              |   3  |  0    |    0    |   0   |    1    |
+| Graph Coloring          |        7              |   4  |  0    |    0    |   3   |    2    |
+| Domination Set          |        3              |   0  |  0    |    1    |   2   |    5    |
+| Exact Cover             |        7              |   2  |  0    |    1    |   4   |    3    |
+| Sudoku                  |        5              |   4  |  0    |    1    |   0   |    4    |
+| B\&W Queens             |        5              |   3  |  2    |    0    |   0   |    3    |
+| Hitting Set             |        3              |   0  |  0    |    1    |   2   |    2    |
+| FAP                     |        3              |   0  |  0    |    1    |   2   |    3    |
+| Feedback Arc Set        |        4              |   0  |  0    |    2    |   2   |    3    |
+| Latin Square            |        4              |   4  |  0    |    0    |   0   |    2    |
+| Edge Domination         |        3              |   0  |  0    |    1    |   2   |    5    |
+| FAP                     |        5              |   3  |  2    |    0    |   0   |    3    |
+| Set Packing             |        4              |   2  |  0    |    0    |   2   |    1    |
+| Clique Cover            |        4              |   3  |  0    |    1    |   0   |    3    |
+| Feedback Set            |        5              |   0  |  0    |    5    |   0   |    3    |
+| Edge Coloring           |        3              |   3  |  0    |    0    |   0   |    3    |
+| Set Splitting           |        5              |   2  |  0    |    1    |   2   |    3    |
+| N Queens                |        6              |   4  |  2    |    0    |   0   |    3    |
+| Vertex Cover            |        3              |   0  |  0    |    1    |   2   |    4    |
+| Subgraph Isom-ism       |        5              |   2  |  0    |    1    |   2   |    4    |
 
 ## Sketching Examples
 Here in the sketches we use the symbol & to join atom and we put [...] around the sketched arithmetic expressions to simplify the parsing. While in the paper we use *default preferences*, here we demonstrate various features of Sketched ASP such as user-defined preferences.
