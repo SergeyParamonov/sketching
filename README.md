@@ -5,7 +5,6 @@ This readme contains examples of sketched answer set programs (*below*), [requir
 
 * **sketches** contains sketches of the most popular NP completed problems and puzzles, such as Set Packing, Hamiltonian Path, Graph Coloring, Graph Clique, Hitting Set, Domination Set, N Queen Problem (regular and black and white versions), Three Dimensional Matching, Sudoku, Subgraph Isomorphism, Radio Frequency Assignment, Vertex Cover, Latin Square, etc. See [the complete table](https://github.com/SergeyParamonov/sketching#full-table-of-sketched-problems) with descriptions below.
 * **ASP_encodings** contains ASP encodings for most of the sketched problems
-* **skethcher_sources**  contains python source files [**will be uploaded later on**]
 * **rewritten_sketches** contains sketches rewritten into ASP (obtained by running the algorithm on corresponding sketch)
 
 ## Dataset overview
