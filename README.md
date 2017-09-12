@@ -3,6 +3,8 @@
 
 This readme contains examples of sketched answer set programs (*below*), [requirements and how to run guide](https://github.com/SergeyParamonov/sketching#how-to-run-and-requirements), [a note on predefined operators](https://github.com/SergeyParamonov/sketching#domains-of-predefined-sketching-operators), [an example of full sketch rewriting](https://github.com/SergeyParamonov/sketching#full-example-of-rewritten-sketch-black-and-white-queens), and the [table](https://github.com/SergeyParamonov/sketching#full-table-of-sketched-problems) with all sketches, ASP models of the problems, rewritten sketches (into ASP) and links to the descriptions. Also here you can find [proof](proof.pdf) for the rewriting theorem and lemmas. 
 
+The readers interested in runtime results, detailed grounding estimates, feature comparison with ILASP, implemenation details on preferences, applications to query sketching, and other extra questions, we refer to [supplimenatary materials](supplimenatary.pdf).
+
 * **sketches** contains sketches of the most popular NP completed problems and puzzles, such as Set Packing, Hamiltonian Path, Graph Coloring, Graph Clique, Hitting Set, Domination Set, N Queen Problem (regular and black and white versions), Three Dimensional Matching, Sudoku, Subgraph Isomorphism, Radio Frequency Assignment, Vertex Cover, Latin Square, etc. See [the complete table](https://github.com/SergeyParamonov/sketching#full-table-of-sketched-problems) with descriptions below.
 * **ASP_encodings** contains ASP encodings for most of the sketched problems
 * **rewritten_sketches** contains sketches rewritten into ASP (obtained by running the algorithm on corresponding sketch)
