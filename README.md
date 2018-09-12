@@ -24,7 +24,6 @@ In table below, we provide an overview of the dataset and its properties, such t
 | Sudoku                  |        5              |   4  |  0    |    1    |   0   |    4    |
 | B\&W Queens             |        5              |   3  |  2    |    0    |   0   |    3    |
 | Hitting Set             |        3              |   0  |  0    |    1    |   2   |    2    |
-| FAP                     |        3              |   0  |  0    |    1    |   2   |    3    |
 | Feedback Arc Set        |        4              |   0  |  0    |    2    |   2   |    3    |
 | Latin Square            |        4              |   4  |  0    |    0    |   0   |    2    |
 | Edge Domination         |        3              |   0  |  0    |    1    |   2   |    5    |
