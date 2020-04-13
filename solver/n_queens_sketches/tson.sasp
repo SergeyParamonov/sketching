@@ -1,0 +1,24 @@
+[SKETCH]
+:- col(I) & row(J1) & row(J2) & J1 != J2 & queen(I,J1) & queen(I,J2).
+:- row(J) & col(I1) & col(I2) & I1 != I2 & queen(I1,J) & queen(I2,J).
+:- row(J1) & row(J2) & J1 > J2 & col(I1) & col(I2) & I1 > I2 & queen(I1,J1) & queen(I2,J2) & I1 - I2 = J1 - J2.
+:- row(J1) & row(J2) & J1 > J2 & col(I1) & col(I2) & I1 < I2 & queen(I1,J1) & queen(I2,J2) & I2 - I1 = J1 - J2.
+[END]
+
+[DOMAIN]
+?= : -10..20
+?+ : -10..20
+
+[FACTS]
+col(1..8). row(1..8).
+
+[PREFERENCES]
+?= : = -> max, != -> max.
+
+[EXAMPLES] % delete if run randomized_experiment
+positive : queen(1,8). queen(2,2). queen(3,5). queen(4,3). queen(5,1). queen(6,7). queen(7,4). queen(8,6).
+positive : queen(1,2). queen(2,5). queen(3,7). queen(4,1). queen(5,3). queen(6,8). queen(7,6). queen(8,4).
+negative : queen(1,1). queen(2,2). queen(3,3). queen(4,4).
+negative : queen(1,2). queen(2,1).
+negative : queen(1,1). queen(1,2).
+negative : queen(2,2). queen(1,2).

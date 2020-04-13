@@ -1,0 +1,20 @@
+problem,number_of_examples,With Preferences,Without Preferences
+B&W Queens,1,37,1107
+B&W Queens,2,13,27
+B&W Queens,3,3,3
+B&W Queens,4,1,1
+FAP,7,1,1
+FAP,6,2,4
+FAP,5,10,358
+FAP,4,28,378
+FAP,3,52,2260
+FAP,2,88,3188
+FAP,1,146,5926
+Sudoku,7,1,9
+Sudoku,6,1,9
+Sudoku,5,1,9
+Sudoku,4,1,9
+Sudoku,3,1,9
+Sudoku,2,2,18
+Sudoku,1,4,36
+

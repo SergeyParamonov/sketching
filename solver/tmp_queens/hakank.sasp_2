@@ -1,0 +1,16 @@
+% some constraints on rows, columns and diagonals
+[SKETCH]
+:- queen(X1,Y1) & queen(X2,Y2) & X1 ?= X2 & Y1 = Y2.
+:- queen(X1,Y1) & queen(X2,Y2) & X1 < X2 & Y1 + X1 ?= Y2 + X2.
+:- queen(X1,Y1) & queen(X2,Y2) & X1 < X2 & [ Y1 ?+ X1 ] ?= [ Y2 ?+ X2 ] .
+
+[DOMAIN]
+?= : -10..20
+?+ : -10..20
+
+[PREFERENCES]
+?= : = -> max, != -> max.
+
+[EXAMPLES]
+
+

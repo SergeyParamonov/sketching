@@ -1,0 +1,16 @@
+[SKETCH]
+% something should happen to the values in the same rows
+ :- cell(X,Y1,N1) & cell(X,Y2,N2) & Y1 ?= Y2 & N1 = N2.
+% something should happen to the values in the same columns
+ :- cell(X1,Y,N1) & cell(X2,Y,N2) & X1 != X2 & N1 ?= N2.
+
+[DOMAIN]
+?= : 1..3
+
+[FACTS]
+
+[PREFERENCES]
+?= : = -> max, != -> max, unbound -> max.
+
+[EXAMPLES]
+

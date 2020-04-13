@@ -1,0 +1,4 @@
+https://www.cs.nmsu.edu/~tson/tutorials/asp-tutorial.pdf
+http://www.hakank.org/answer_set_programming/nqueens.lp
+https://github.com/for-reviews/sketching/blob/master/ASP_encodings/regular_queens.asp
+http://www.cs.uni-potsdam.de/~torsten/Lehre/ASP/Folien/asp-handout.pdf

@@ -1,0 +1,33 @@
+sketch,number_of_examples,overall_examples,number_of_solutions,before_dominance_check
+Exact Cover (7),4,4,1,3
+Exact Cover (7),3,4,4,12
+Exact Cover (7),2,4,4,12
+Exact Cover (7),1,4,24,252
+FAP (5),7,7,1,1
+FAP (5),6,7,2,2
+FAP (5),5,7,10,24
+FAP (5),4,7,27,46
+FAP (5),3,7,52,92
+FAP (5),2,7,88,138
+FAP (5),1,7,146,1173
+3D Matching (3),3,4,1,3
+3D Matching (3),2,4,2,6
+3D Matching (3),1,4,2,32
+B&W Queens (5),4,4,1,1
+B&W Queens (5),3,4,3,3
+B&W Queens (5),2,4,13,27
+B&W Queens (5),1,4,37,1107
+Sudoku (5),3,3,1,9
+Sudoku (5),2,3,2,18
+Sudoku (5),1,3,4,36
+Subgraph Isomorphism (5),3,3,1,3
+Subgraph Isomorphism (5),2,3,2,6
+Subgraph Isomorphism (5),1,3,12,36
+Latin Square (4),3,3,1,9
+Latin Square (4),2,3,2,18
+Latin Square (4),1,3,4,36
+N Queens (6),3,3,3,90
+N Queens (6),2,3,11,1071
+N Queens (6),1,3,20,1629
+Edge Coloring (3),2,2,2,18
+Edge Coloring (3),1,2,3,27

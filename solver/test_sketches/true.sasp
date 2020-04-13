@@ -1,0 +1,68 @@
+% Schema:
+% pupil(key:ID, Name, Country)
+% specialization(key: ID, Major, Minor)
+% school(key: SID, SName, PID, Region, Language)
+% Possible schema constraints:
+% FK: pupil(ID,...) -> specialization(ID,...)
+% FK: specialization(ID,...) -> school(...,PID,...)
+
+
+[SKETCH]
+% Schema constraints
+sc(SId,Sn,PID,R,L) :- p(PID,N,C)   & fresh_consts(SId,Sn,R,L) & fk_holds(1).
+sc(SId,Sn,PID,R,L) :- s(PID,Mj,Mi) & fresh_consts(SId,Sn,R,L) & fk_holds(2).
+
+% TC statements
+p_a(Id,N,C)          :- p(Id,N,C)                                             & ?true1.
+s_a(Id,Mj,Mi)        :- s(Id,Mj,Mi)                                           & ?true2.
+sc_a(SId,Sn,PID,R,L) :- sc(SId,Sn,PID,R,L)                                    & ?true3.
+p_a(Id,N,C)          :- p(Id,N,C) & s(Id,Mj,Mi) & Mj = cs                     & ?true4.
+s_a(Id,Mj,Mi)        :- s(Id,Mj,Mi) & Mj = cs & p(I,N,C)                      & ?true5.
+sc_a(SId,Sn,PID,R,L) :- sc(SId,Sn,PID,R,L) & p(PID,N,C)                       & ?true6.
+sc_a(SId,Sn,PID,R,L) :- sc(SId,Sn,PID,R,L) & s(PID,Mj,Mi) & Mj = cs           & ?true7.
+p_a(Id,N,C)          :- p(Id,N,C) & s(Id,Mj,Mi) & Mj = cs & sc(SId,Sn,Id,R,L) & ?true8.
+s_a(Id,Mj,Mi)        :- s(Id,Mj,Mi) & Mj = cs & p(Id,N,C) & sc(SId,Sn,Id,R,L) & ?true9.
+sc_a(SId,Sn,Id,R,L)  :- sc(SId,Sn,Id,R,L) & s(Id,Mj,Mi) & Mj = cs & p(Id,N,C) & ?true10.
+
+% completeness check and the failure constraint
+complete :- p_a(Id,Name,Country) & s_a(Id,Mj,Mi) & Mj ?= cs.
+:- not complete.
+
+[EXAMPLES]
+negative: p(i,n,c). s(i,cs,mi).
+positive: p(i,n,c). s(i,cs,mi). fk_holds(1).
+positive: p(i,n,c). s(i,cs,mi). fk_holds(2).
+
+[FACTS]
+t.
+fresh_consts(f_sid,f_sname,f_region,f_lang). 
+
+
+
+[SKETCHEDVAR]
+?true1/0 : t,f
+?true2/0 : t,f
+?true3/0 : t,f
+?true4/0 : t,f
+?true5/0 : t,f
+?true6/0 : t,f
+?true7/0 : t,f
+?true8/0 : t,f
+?true9/0 : t,f
+?true10/0 : t,f
+
+[DOMAIN]
+?= : cs, math, physics, languages
+
+[PREFERENCES]
+?true1 : t -> 0, f -> 1.
+?true2 : t -> 0, f -> 1.
+?true3 : t -> 0, f -> 1.
+?true4 : t -> 0, f -> 1.
+?true5 : t -> 0, f -> 1.
+?true6 : t -> 0, f -> 1.
+?true7 : t -> 0, f -> 1.
+?true8 : t -> 0, f -> 1.
+?true9 : t -> 0, f -> 1.
+?true10 : t -> 0, f -> 1.
+?= : = -> max, != -> max.

@@ -1,0 +1,25 @@
+[SKETCH]
+:- ?p(X) & ?not ?q(X).
+
+covered(X) :- edge(X,Y) & domination_set(Y).
+vertex(X)  :- edge(X,_).
+vertex(X)  :- edge(_,X).
+edge(X,Y)  :- edge(Y,X).
+
+[EXAMPLES]
+positive: domination_set(b). domination_set(d).
+negative: domination_set(a). domination_set(b).
+
+[SKETCHEDVAR]
+?p/1 : vertex, covered
+?q/1 : vertex, covered
+
+[DOMAIN]
+not : a,b,c,d,e,f
+
+[FACTS]
+edge(a,b). edge(a,c).
+edge(b,c). edge(b,d).
+edge(c,d).
+edge(d,f).
+

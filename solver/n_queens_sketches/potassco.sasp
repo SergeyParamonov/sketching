@@ -1,0 +1,26 @@
+% some constraints on rows, columns and diagonals
+[SKETCH]
+ :- queen(I,J) & queen(I,JJ)  & J != JJ.
+ :- queen(I,J) & queen(II,J)  & I != II.
+ :- queen(I,J) & queen(II,JJ) & I != II & J != JJ & I - J = II - JJ.
+ :- queen(I,J) & queen(II,JJ) & I != II & J != JJ & I + J = II + JJ.
+[END]
+
+[DOMAIN]
+?= : -10..20
+?+ : -10..20
+
+
+[PREFERENCES]
+?= : = -> max, != -> max.
+
+[EXAMPLES]
+% delete if run randomized_experiment
+positive : queen(1,8). queen(2,2). queen(3,5). queen(4,3). queen(5,1). queen(6,7). queen(7,4). queen(8,6).
+positive : queen(1,2). queen(2,5). queen(3,7). queen(4,1). queen(5,3). queen(6,8). queen(7,6). queen(8,4).
+negative : queen(1,1). queen(2,2). queen(3,3). queen(4,4).
+negative : queen(1,2). queen(2,1).
+negative : queen(1,1). queen(1,2).
+negative : queen(2,2). queen(1,2).
+
+
